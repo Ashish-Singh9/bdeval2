@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <script defer src="scripts/home.js"></script>
+    <title>home</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="form">
+            <form  id="myForm" >
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="name">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="email">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="address">
+                <label for="phno">Phone No.</label>
+                <input type="text" name="phno" id="phno" placeholder="phone number">
+                <button id="submitBtn" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="data">
+            <%for(let i=0;i<users.length;i++){%>
+                <div class="v">
+                    <h3><%=users[i].name%></h3>
+                    <h3><%=users[i].email%></h3>
+                    <h3><%=users[i].address%></p>
+                    <h3><%=users[i].phno%></h3>
+                </div>
+            <%}%>
+            
+        </div>
+    </div>
+</body>
+</html>
